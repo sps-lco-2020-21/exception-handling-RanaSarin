@@ -5,13 +5,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Exceptions.Tests
 {
     [TestClass]
-    public class ExamScoreExceptionTests
+    public class TriangleTestExceptionTests
     {
         [TestMethod]
         [ExpectedException(typeof(ExamScoreException))]
         public void TestConstructors()
         {
-            var e = new ExamScore(-2, 100);
+            var e = new TriangleAngles(60, 60, 60);
         }
     }
 }

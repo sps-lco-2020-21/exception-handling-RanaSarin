@@ -11,29 +11,26 @@ namespace Exceptions.App
     {
         static void Main(string[] args)
         {
-            Division(25, 5);
-            Division(25, 0);
+            Triangle(6, 6, 6, 60, 60, 60);
 
-            SetExamScore(-2, 72);
-            SetExamScore(5, 0);
 
             Console.ReadKey();
         }
 
-        static void Division(int num1, int num2)
+        static void Triangle(int num1, int num2, int num3, double angle1, double angle2, double angle3)
         {
-            int result = 0;
+            double result = 180;
             try
             {
-                result = num1 / num2;
+                result = angle1 + angle2 + angle3;
             }
-            catch (DivideByZeroException e)
+            catch (InvalidOperationException e)
             {
                 Console.WriteLine("Exception caught: {0}", e);
             }
             finally
             {
-                Console.WriteLine("Result: {0}", result);
+                Console.WriteLine("It is a triangle as its angles sum to: {0}", result);
             }
         }
 

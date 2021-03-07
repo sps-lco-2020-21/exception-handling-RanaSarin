@@ -6,28 +6,23 @@ using System.Threading.Tasks;
 
 namespace Exceptions.Lib
 {
-    public class ExamScore
+    public class TriangleTest
     {
-        readonly int _score;
-        readonly int _total;
+        readonly double _total;
 
-        public ExamScore(int s, int t)
+        public TriangleTest(double angle1, double angle2, double angle3)
         {
-            if (s < 0)
-                throw new ExamScoreException(1, "Cannot have a negative score");
-            _score = s;
+            if (angle1 <= 0 || angle2 <= 0 || angle3 <= 0)
+                throw new TriangleTestException(2, "Must have positive, non-zero angles");
 
-            if (t <= 0)
-                throw new ExamScoreException(2, "Must have a positive, non-zero total");
-
-            _total = t;
+            _total = angle1 + angle2 + angle3;
         }
 
-        public decimal Percentage
+        public double totalangle
         {
             get
             {
-                return _score / _total;
+                return _total;
             }
         }
     }

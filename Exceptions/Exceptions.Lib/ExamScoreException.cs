@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exceptions.Lib
 {
-    public class ExamScoreException : Exception
+    public class TriangleTestException : Exception
     {
         readonly int _codeNumber;
 
-        public ExamScoreException(int codeNumber, string msg) : base(msg)
+        public TriangleTestException(int codeNumber, string msg) : base(msg)
         {
             _codeNumber = codeNumber;
         }
